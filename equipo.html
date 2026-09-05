@@ -1,0 +1,312 @@
+﻿<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nuestro Equipo | Torres & Asociados</title>
+  <meta name="description" content="Conozca a los socios fundadores de Torres & Asociados: abogados con trayectoria probada al servicio de sus clientes." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'slate-dark': '#0F172A', 'slate-mid': '#1E293B',
+            'gold': '#D4AF37', 'gold-light': '#E8CC6A', 'snow': '#F8FAFC',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:  ['Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Fallback placeholder image style for missing local photos -->
+  <style>
+    .photo-fallback {
+      width: 100%; height: 340px;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+      filter: grayscale(100%);
+      transition: filter .5s ease;
+    }
+    .socio-card:hover .photo-fallback { filter: grayscale(0%); }
+    .photo-fallback i { font-size: 5rem; color: rgba(212,175,55,.3); }
+    .photo-fallback span { font-size: .8rem; color: #475569; margin-top: .5rem; letter-spacing: .05em; }
+
+    /* Use real photo if it exists, fallback div otherwise */
+    .socio-card img.photo { display: block; }
+    .socio-card .photo-fallback { display: none; }
+    .socio-card img.photo.broken + .photo-fallback { display: flex; }
+    .socio-card img.photo.broken { display: none; }
+  </style>
+</head>
+
+<body class="bg-slate-dark text-snow">
+
+  <!-- NAVBAR UNIVERSAL -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 bg-slate-dark">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="footer-logo text-xl tracking-tight">Torres <em>&amp;</em> Asociados</a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html"    class="nav-link">Inicio</a>
+          <a href="areas.html"   class="nav-link">Áreas</a>
+          <a href="equipo.html"  class="nav-link active">Equipo</a>
+          <a href="contacto.html" class="nav-link">Contacto</a>
+        </nav>
+        <div class="hidden md:block">
+          <a href="contacto.html" class="btn-gold text-sm"><i class="fas fa-envelope"></i> Consulta Gratuita</a>
+        </div>
+        <button id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden flex flex-col gap-1.5">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" role="navigation">
+      <a href="index.html"    class="nav-link">Inicio</a>
+      <a href="areas.html"   class="nav-link">Áreas de Práctica</a>
+      <a href="equipo.html"  class="nav-link active">Nuestro Equipo</a>
+      <a href="contacto.html" class="nav-link">Contacto</a>
+      <div class="mt-4"><a href="contacto.html" class="btn-gold w-full justify-center text-sm"><i class="fas fa-envelope"></i> Consulta Gratuita</a></div>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- PAGE BANNER -->
+    <div class="page-banner" role="banner" style="background-image: linear-gradient(135deg,rgba(15,23,42,.96) 0%,rgba(30,41,59,.9) 100%), url('https://images.unsplash.com/photo-1521791055366-0d553872952f?w=1600&q=80'); background-size:cover; background-position:center;">
+      <p class="section-eyebrow"><i class="fas fa-users mr-2"></i>Liderazgo Jurídico</p>
+      <h1>Nuestros Socios</h1>
+      <p class="breadcrumb">
+        <a href="index.html">Inicio</a>
+        <span>/</span>
+        <span class="text-snow">Nuestro Equipo</span>
+      </p>
+    </div>
+
+
+    <!-- INTRO -->
+    <section class="py-20 px-5 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-2xl mx-auto text-center reveal">
+          <p class="section-eyebrow">Las Mentes detrás de la Firma</p>
+          <h2 class="section-title">Socios Fundadores</h2>
+          <div class="gold-divider mx-auto"></div>
+          <p class="text-slate-400 leading-relaxed">
+            Nuestros socios son reconocidos en los principales rankings jurídicos del país.
+            Cada uno aporta décadas de especialización, una red de contactos institucionales de primer nivel
+            y un compromiso absoluto con los intereses de cada cliente.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SOCIOS GRID -->
+    <section class="pb-24 px-5 lg:px-8" aria-label="Perfiles de socios">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-10" data-stagger>
+
+          <!-- Socio 1 -->
+          <article class="socio-card reveal" aria-label="Perfil de Rodrigo Torres Medina">
+            <!-- Si coloca img/socio1.jpg en la carpeta, se usará automáticamente -->
+            <img
+              class="photo"
+              src="img/socio1.jpg"
+              alt="Fotografía del Lic. Rodrigo Torres Medina"
+              onerror="this.classList.add('broken')"
+            />
+            <!-- Fallback si no existe la foto -->
+            <div class="photo-fallback">
+              <i class="fas fa-user-tie"></i>
+              <span>img/socio1.jpg</span>
+            </div>
+
+            <div class="socio-info">
+              <h3>Lic. Rodrigo Torres Medina</h3>
+              <p class="socio-role">Socio Fundador · Derecho Corporativo</p>
+              <p>
+                Más de 28 años en asesoría corporativa de alto nivel.
+                Egresado de la UNAM con maestría en Yale Law School.
+                Miembro activo de la International Bar Association.
+              </p>
+              <div class="socio-social">
+                <a href="#" aria-label="LinkedIn de Rodrigo Torres"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Correo de Rodrigo Torres"><i class="fas fa-envelope"></i></a>
+                <a href="#" aria-label="Perfil de Rodrigo Torres"><i class="fas fa-user"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Socio 2 -->
+          <article class="socio-card reveal" aria-label="Perfil de Dra. Valentina Ríos Cortés">
+            <img
+              class="photo"
+              src="img/socio2.jpg"
+              alt="Fotografía de la Dra. Valentina Ríos Cortés"
+              onerror="this.classList.add('broken')"
+            />
+            <div class="photo-fallback">
+              <i class="fas fa-user-tie"></i>
+              <span>img/socio2.jpg</span>
+            </div>
+
+            <div class="socio-info">
+              <h3>Dra. Valentina Ríos Cortés</h3>
+              <p class="socio-role">Socia Senior · Litigios &amp; Arbitraje</p>
+              <p>
+                Especialista en arbitraje internacional con sede en México y España.
+                Doctorado en Derecho Procesal por la Universidad Complutense de Madrid.
+                Árbitro certificada por la CCI.
+              </p>
+              <div class="socio-social">
+                <a href="#" aria-label="LinkedIn de Valentina Ríos"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Correo de Valentina Ríos"><i class="fas fa-envelope"></i></a>
+                <a href="#" aria-label="Perfil de Valentina Ríos"><i class="fas fa-user"></i></a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Socio 3 -->
+          <article class="socio-card reveal" aria-label="Perfil de Mtro. Alejandro Fuentes Vega">
+            <img
+              class="photo"
+              src="img/socio3.jpg"
+              alt="Fotografía del Mtro. Alejandro Fuentes Vega"
+              onerror="this.classList.add('broken')"
+            />
+            <div class="photo-fallback">
+              <i class="fas fa-user-tie"></i>
+              <span>img/socio3.jpg</span>
+            </div>
+
+            <div class="socio-info">
+              <h3>Mtro. Alejandro Fuentes Vega</h3>
+              <p class="socio-role">Socio Director · Propiedad Intelectual</p>
+              <p>
+                Pionero en protección de marcas digitales en México.
+                Maestría en Propiedad Intelectual por la WIPO Academy en Ginebra.
+                Consultor oficial ante el IMPI y la OMPI.
+              </p>
+              <div class="socio-social">
+                <a href="#" aria-label="LinkedIn de Alejandro Fuentes"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="Correo de Alejandro Fuentes"><i class="fas fa-envelope"></i></a>
+                <a href="#" aria-label="Perfil de Alejandro Fuentes"><i class="fas fa-user"></i></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- VALORES / CULTURA -->
+    <section class="bg-slate-mid/30 border-y border-gold/10 py-20 px-5 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <p class="section-eyebrow">Cultura de la Firma</p>
+          <h2 class="section-title">Lo que nos une</h2>
+          <div class="gold-divider mx-auto"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6" data-stagger>
+
+          <div class="pillar-card text-center reveal">
+            <div class="icon-wrap mx-auto"><i class="fas fa-handshake"></i></div>
+            <h3 class="font-serif text-lg font-bold mb-2">Integridad</h3>
+            <p class="text-slate-400 text-sm">Actuamos con honestidad y transparencia en cada mandato, sin importar la complejidad del asunto.</p>
+          </div>
+
+          <div class="pillar-card text-center reveal">
+            <div class="icon-wrap mx-auto"><i class="fas fa-brain"></i></div>
+            <h3 class="font-serif text-lg font-bold mb-2">Excelencia</h3>
+            <p class="text-slate-400 text-sm">Nos exigimos los más altos estándares de calidad jurídica en cada escrito, estrategia y negociación.</p>
+          </div>
+
+          <div class="pillar-card text-center reveal">
+            <div class="icon-wrap mx-auto"><i class="fas fa-globe"></i></div>
+            <h3 class="font-serif text-lg font-bold mb-2">Visión Global</h3>
+            <p class="text-slate-400 text-sm">Perspectiva internacional con arraigo local. Operamos con el estándar de los despachos globales.</p>
+          </div>
+
+          <div class="pillar-card text-center reveal">
+            <div class="icon-wrap mx-auto"><i class="fas fa-user-shield"></i></div>
+            <h3 class="font-serif text-lg font-bold mb-2">Lealtad</h3>
+            <p class="text-slate-400 text-sm">Sus intereses son nuestra prioridad absoluta. Relaciones de largo plazo construidas en la confianza.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CTA -->
+    <section class="py-20 px-5 text-center reveal">
+      <p class="section-eyebrow">Únase a nuestra clientela selecta</p>
+      <h2 class="section-title mb-4">Hable con Nuestros Socios</h2>
+      <p class="text-slate-400 mb-8 max-w-lg mx-auto">
+        Cada socio dedica tiempo personal a las consultas iniciales. Cuéntenos su caso
+        y le asignamos al especialista más adecuado para sus necesidades.
+      </p>
+      <a href="contacto.html" class="btn-gold"><i class="fas fa-comments"></i> Iniciar Consulta</a>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER UNIVERSAL -->
+  <footer>
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div class="md:col-span-2">
+          <a href="index.html" class="footer-logo text-lg">Torres <em>&</em> Asociados</a>
+          <p class="text-slate-500 text-sm leading-relaxed mt-4 max-w-sm">Firma jurídica de excelencia con presencia nacional. Comprometidos con la defensa de sus derechos e intereses con la más alta ética profesional.</p>
+          <div class="flex gap-3 mt-6">
+            <a href="https://instagram.com/ToriiCode" target="_blank" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com/@ToriiCode" target="_blank" class="social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/56940342402" target="_blank" class="social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <nav aria-label="Navegación footer">
+          <p class="text-gold text-xs font-bold tracking-widest uppercase mb-4">Páginas</p>
+          <ul class="space-y-2">
+            <li><a href="index.html"    class="footer-link">Inicio</a></li>
+            <li><a href="areas.html"   class="footer-link">Áreas de Práctica</a></li>
+            <li><a href="equipo.html"  class="footer-link">Nuestro Equipo</a></li>
+            <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="text-gold text-xs font-bold tracking-widest uppercase mb-4">Contacto</p>
+          <ul class="space-y-3 text-sm text-slate-500">
+            <li class="flex gap-2"><i class="fas fa-location-dot text-gold mt-0.5"></i> Av. Reforma 2500, CDMX</li>
+            <li class="flex gap-2"><i class="fas fa-phone text-gold mt-0.5"></i> +56 9 4034 2402</li>
+            <li class="flex gap-2"><i class="fas fa-envelope text-gold mt-0.5"></i> toriiicode@gmail.com</li>
+            <li class="flex gap-2"><i class="fas fa-clock text-gold mt-0.5"></i> Lun–Vie, 09:00–18:00</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-gold/10 mt-12 mb-6" />
+      <div class="flex flex-col md:flex-row justify-between items-center gap-3 text-slate-600 text-xs">
+        <p>© 2026 Torres &amp; Asociados. Todos los derechos reservados.</p>
+        <p>Diseñado con <i class="fas fa-heart text-gold/60"></i> para la excelencia jurídica.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

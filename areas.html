@@ -1,0 +1,366 @@
+﻿<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Áreas de Práctica | Torres & Asociados</title>
+  <meta name="description" content="Descubra las áreas de especialización jurídica de Torres & Asociados: Derecho Corporativo, Litigios, Derecho Inmobiliario y Propiedad Intelectual." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'slate-dark': '#0F172A', 'slate-mid': '#1E293B',
+            'gold': '#D4AF37', 'gold-light': '#E8CC6A', 'snow': '#F8FAFC',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:  ['Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-slate-dark text-snow">
+
+  <!-- NAVBAR UNIVERSAL -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 bg-slate-dark">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="footer-logo text-xl tracking-tight">Torres <em>&amp;</em> Asociados</a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html"    class="nav-link">Inicio</a>
+          <a href="areas.html"   class="nav-link active">Áreas</a>
+          <a href="equipo.html"  class="nav-link">Equipo</a>
+          <a href="contacto.html" class="nav-link">Contacto</a>
+        </nav>
+        <div class="hidden md:block">
+          <a href="contacto.html" class="btn-gold text-sm"><i class="fas fa-envelope"></i> Consulta Gratuita</a>
+        </div>
+        <button id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden flex flex-col gap-1.5">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" role="navigation">
+      <a href="index.html"    class="nav-link">Inicio</a>
+      <a href="areas.html"   class="nav-link active">Áreas de Práctica</a>
+      <a href="equipo.html"  class="nav-link">Nuestro Equipo</a>
+      <a href="contacto.html" class="nav-link">Contacto</a>
+      <div class="mt-4"><a href="contacto.html" class="btn-gold w-full justify-center text-sm"><i class="fas fa-envelope"></i> Consulta Gratuita</a></div>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- PAGE BANNER -->
+    <div class="page-banner" role="banner">
+      <p class="section-eyebrow"><i class="fas fa-folder-open mr-2"></i>Especialidades Jurídicas</p>
+      <h1>Áreas de Práctica</h1>
+      <p class="breadcrumb">
+        <a href="index.html">Inicio</a>
+        <span>/</span>
+        <span class="text-snow">Áreas de Práctica</span>
+      </p>
+    </div>
+
+
+    <!-- INTRO -->
+    <section class="py-20 px-5 lg:px-8" aria-labelledby="areas-intro">
+      <div class="max-w-7xl mx-auto">
+        <div class="max-w-2xl mx-auto text-center reveal">
+          <p class="section-eyebrow">Profundidad &amp; Especialización</p>
+          <h2 id="areas-intro" class="section-title">Cobertura Jurídica Integral</h2>
+          <div class="gold-divider mx-auto"></div>
+          <p class="text-slate-400 leading-relaxed">
+            Torres &amp; Asociados concentra su práctica en cuatro disciplinas donde hemos forjado
+            una reputación de resultados. Cada área cuenta con un equipo dedicado de especialistas
+            que operan con la más rigurosa ética profesional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ÁREA 1 — DERECHO CORPORATIVO -->
+    <section class="py-16 px-5 lg:px-8 border-t border-gold/10" aria-labelledby="area-corporativo">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+          <div class="reveal">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center text-2xl text-gold flex-shrink-0">
+                <i class="fas fa-building-columns"></i>
+              </div>
+              <div>
+                <p class="section-eyebrow mb-0">Área 01</p>
+                <h2 id="area-corporativo" class="font-serif text-2xl font-bold">Derecho Corporativo</h2>
+              </div>
+            </div>
+            <div class="gold-divider"></div>
+            <p class="text-slate-400 leading-relaxed mb-6">
+              Brindamos asesoría estratégica en todas las etapas del ciclo de vida empresarial.
+              Desde la constitución societaria hasta las operaciones de M&amp;A más complejas,
+              nuestros abogados corporativos actúan como verdaderos aliados de negocios, aportando
+              perspectiva jurídica y visión comercial en cada decisión.
+            </p>
+            <ul class="space-y-2 text-sm text-slate-300">
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Constitución y reestructuración societaria</li>
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Fusiones, adquisiciones y due diligence</li>
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Gobierno corporativo y compliance</li>
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Contratos mercantiles y joint ventures</li>
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Capital de riesgo e inversión extranjera</li>
+            </ul>
+            <a href="contacto.html" class="btn-gold mt-8 inline-flex"><i class="fas fa-arrow-right"></i> Consultar este servicio</a>
+          </div>
+
+          <div class="area-card reveal" style="padding:2.5rem">
+            <i class="fas fa-building-columns area-icon"></i>
+            <h3>¿Por qué elegirnos?</h3>
+            <p>Hemos asesorado a más de 300 empresas en procesos de expansión regional, con una cartera que incluye fondos de capital privado y corporaciones multinacionales listadas en bolsa.</p>
+            <div class="grid grid-cols-2 gap-4 mt-4">
+              <div class="text-center p-3 bg-slate-dark rounded">
+                <p class="font-serif text-3xl font-bold text-gold">300+</p>
+                <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Empresas Asesoradas</p>
+              </div>
+              <div class="text-center p-3 bg-slate-dark rounded">
+                <p class="font-serif text-3xl font-bold text-gold">$2B+</p>
+                <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">En Transacciones</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ÁREA 2 — LITIGIOS -->
+    <section class="py-16 px-5 lg:px-8 border-t border-gold/10 bg-slate-mid/30" aria-labelledby="area-litigios">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+          <div class="area-card reveal order-2 lg:order-1" style="padding:2.5rem">
+            <i class="fas fa-gavel area-icon"></i>
+            <h3>¿Por qué elegirnos?</h3>
+            <p>Nuestra sala de litigios cuenta con una tasa de resolución favorable del 94%, acreditada en más de 800 procesos contenciosos ante tribunales federales y locales.</p>
+            <div class="grid grid-cols-2 gap-4 mt-4">
+              <div class="text-center p-3 bg-slate-dark rounded">
+                <p class="font-serif text-3xl font-bold text-gold">94%</p>
+                <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Tasa de Éxito</p>
+              </div>
+              <div class="text-center p-3 bg-slate-dark rounded">
+                <p class="font-serif text-3xl font-bold text-gold">800+</p>
+                <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Casos Ganados</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal order-1 lg:order-2">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center text-2xl text-gold flex-shrink-0">
+                <i class="fas fa-gavel"></i>
+              </div>
+              <div>
+                <p class="section-eyebrow mb-0">Área 02</p>
+                <h2 id="area-litigios" class="font-serif text-2xl font-bold">Litigios y Arbitraje</h2>
+              </div>
+            </div>
+            <div class="gold-divider"></div>
+            <p class="text-slate-400 leading-relaxed mb-6">
+              Cuando el conflicto es inevitable, contar con los mejores litigantes marca la diferencia.
+              Nuestro equipo combina un profundo conocimiento procesal con una visión táctica
+              que anticipa los movimientos del adversario y maximiza las posibilidades de resolución
+              favorable en cada instancia.
+            </p>
+            <ul class="space-y-2 text-sm text-slate-300">
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Litigios civiles y mercantiles de alta cuantía</li>
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Arbitraje nacional e internacional (ICC, UNCITRAL)</li>
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Resolución alternativa de disputas (MASC)</li>
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Medidas cautelares y ejecución de sentencias</li>
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Recursos de amparo y apelación</li>
+            </ul>
+            <a href="contacto.html" class="btn-gold mt-8 inline-flex"><i class="fas fa-arrow-right"></i> Consultar este servicio</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ÁREA 3 — INMOBILIARIO -->
+    <section class="py-16 px-5 lg:px-8 border-t border-gold/10" aria-labelledby="area-inmobiliario">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+          <div class="reveal">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center text-2xl text-gold flex-shrink-0">
+                <i class="fas fa-house-chimney"></i>
+              </div>
+              <div>
+                <p class="section-eyebrow mb-0">Área 03</p>
+                <h2 id="area-inmobiliario" class="font-serif text-2xl font-bold">Derecho Inmobiliario</h2>
+              </div>
+            </div>
+            <div class="gold-divider"></div>
+            <p class="text-slate-400 leading-relaxed mb-6">
+              El mercado inmobiliario presenta complejidades jurídicas que requieren especialistas.
+              Acompañamos a desarrolladoras, inversionistas y compradores individuales en cada
+              etapa de la operación, desde el análisis de título hasta la firma ante notario,
+              minimizando riesgos y protegiendo su inversión.
+            </p>
+            <ul class="space-y-2 text-sm text-slate-300">
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Due diligence inmobiliario y análisis de título</li>
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Contratos de compraventa y arrendamiento</li>
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Financiamiento hipotecario y estructuración fiduciaria</li>
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Regularización y cambio de uso de suelo</li>
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Disputas de propiedad y desalojos</li>
+            </ul>
+            <a href="contacto.html" class="btn-gold mt-8 inline-flex"><i class="fas fa-arrow-right"></i> Consultar este servicio</a>
+          </div>
+
+          <div class="area-card reveal" style="padding:2.5rem">
+            <i class="fas fa-house-chimney area-icon"></i>
+            <h3>¿Por qué elegirnos?</h3>
+            <p>Hemos participado en la estructuración jurídica de más de 450 operaciones inmobiliarias, incluyendo desarrollos de uso mixto, centros comerciales y complejos residenciales de lujo.</p>
+            <div class="grid grid-cols-2 gap-4 mt-4">
+              <div class="text-center p-3 bg-slate-dark rounded">
+                <p class="font-serif text-3xl font-bold text-gold">450+</p>
+                <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Operaciones</p>
+              </div>
+              <div class="text-center p-3 bg-slate-dark rounded">
+                <p class="font-serif text-3xl font-bold text-gold">$1.5B</p>
+                <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">En Activos</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ÁREA 4 — PROPIEDAD INTELECTUAL -->
+    <section class="py-16 px-5 lg:px-8 border-t border-gold/10 bg-slate-mid/30" aria-labelledby="area-pi">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-2 gap-14 items-center">
+
+          <div class="area-card reveal order-2 lg:order-1" style="padding:2.5rem">
+            <i class="fas fa-lightbulb area-icon"></i>
+            <h3>¿Por qué elegirnos?</h3>
+            <p>Hemos registrado y defendido más de 2,000 marcas y 150 patentes en México y ante organismos internacionales como la OMPI y la USPTO, con presencia en 28 países.</p>
+            <div class="grid grid-cols-2 gap-4 mt-4">
+              <div class="text-center p-3 bg-slate-dark rounded">
+                <p class="font-serif text-3xl font-bold text-gold">2,000+</p>
+                <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Marcas Registradas</p>
+              </div>
+              <div class="text-center p-3 bg-slate-dark rounded">
+                <p class="font-serif text-3xl font-bold text-gold">28</p>
+                <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Países</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="reveal order-1 lg:order-2">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-14 h-14 rounded-full bg-gold/10 flex items-center justify-center text-2xl text-gold flex-shrink-0">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <div>
+                <p class="section-eyebrow mb-0">Área 04</p>
+                <h2 id="area-pi" class="font-serif text-2xl font-bold">Propiedad Intelectual</h2>
+              </div>
+            </div>
+            <div class="gold-divider"></div>
+            <p class="text-slate-400 leading-relaxed mb-6">
+              Su marca, sus creaciones y su tecnología son activos que merecen la más sólida
+              protección jurídica. Nuestro departamento de propiedad intelectual combina
+              experticia técnica y legal para blindar su innovación contra la competencia
+              desleal y la infracción en todos los mercados donde opera.
+            </p>
+            <ul class="space-y-2 text-sm text-slate-300">
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Registro y vigilancia de marcas y patentes</li>
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Derechos de autor y licenciamiento</li>
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Secretos industriales y know-how</li>
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Litigios por infracción y piratería</li>
+              <li class="flex gap-2 items-start"><i class="fas fa-check text-gold mt-0.5 flex-shrink-0"></i> Protección internacional (OMPI, USPTO, EUIPO)</li>
+            </ul>
+            <a href="contacto.html" class="btn-gold mt-8 inline-flex"><i class="fas fa-arrow-right"></i> Consultar este servicio</a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- CTA FINAL -->
+    <section class="bg-slate-mid border-y border-gold/15 py-16 px-5 text-center reveal">
+      <p class="section-eyebrow">¿Tiene un caso urgente?</p>
+      <h2 class="section-title mb-4">Estamos Listos para Asesorarle</h2>
+      <p class="text-slate-400 mb-8 max-w-xl mx-auto">
+        Contacte a uno de nuestros socios hoy mismo. La primera consulta es completamente confidencial y sin costo.
+      </p>
+      <div class="flex flex-wrap justify-center gap-4">
+        <a href="contacto.html" class="btn-gold"><i class="fas fa-calendar-check"></i> Agendar Consulta</a>
+        <a href="equipo.html" class="btn-outline-gold"><i class="fas fa-users"></i> Ver Equipo</a>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER UNIVERSAL -->
+  <footer>
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div class="md:col-span-2">
+          <a href="index.html" class="footer-logo text-lg">Torres <em>&</em> Asociados</a>
+          <p class="text-slate-500 text-sm leading-relaxed mt-4 max-w-sm">Firma jurídica de excelencia con presencia nacional. Comprometidos con la defensa de sus derechos e intereses con la más alta ética profesional.</p>
+          <div class="flex gap-3 mt-6">
+            <a href="https://instagram.com/ToriiCode" target="_blank" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com/@ToriiCode" target="_blank" class="social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/56940342402" target="_blank" class="social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <nav aria-label="Navegación footer">
+          <p class="text-gold text-xs font-bold tracking-widest uppercase mb-4">Páginas</p>
+          <ul class="space-y-2">
+            <li><a href="index.html"    class="footer-link">Inicio</a></li>
+            <li><a href="areas.html"   class="footer-link">Áreas de Práctica</a></li>
+            <li><a href="equipo.html"  class="footer-link">Nuestro Equipo</a></li>
+            <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="text-gold text-xs font-bold tracking-widest uppercase mb-4">Contacto</p>
+          <ul class="space-y-3 text-sm text-slate-500">
+            <li class="flex gap-2"><i class="fas fa-location-dot text-gold mt-0.5"></i> Av. Reforma 2500, CDMX</li>
+            <li class="flex gap-2"><i class="fas fa-phone text-gold mt-0.5"></i> +56 9 4034 2402</li>
+            <li class="flex gap-2"><i class="fas fa-envelope text-gold mt-0.5"></i> toriiicode@gmail.com</li>
+            <li class="flex gap-2"><i class="fas fa-clock text-gold mt-0.5"></i> Lun–Vie, 09:00–18:00</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-gold/10 mt-12 mb-6" />
+      <div class="flex flex-col md:flex-row justify-between items-center gap-3 text-slate-600 text-xs">
+        <p>© 2026 Torres &amp; Asociados. Todos los derechos reservados.</p>
+        <p>Diseñado con <i class="fas fa-heart text-gold/60"></i> para la excelencia jurídica.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

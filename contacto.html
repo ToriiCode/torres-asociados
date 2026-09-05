@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contacto | Torres & Asociados</title>
+  <meta name="description" content="Contacte a Torres & Asociados para agendar su consulta jurídica confidencial y sin costo." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'slate-dark': '#0F172A', 'slate-mid': '#1E293B',
+            'gold': '#D4AF37', 'gold-light': '#E8CC6A', 'snow': '#F8FAFC',
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:  ['Inter', 'system-ui', 'sans-serif'],
+          },
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body class="bg-slate-dark text-snow">
+
+  <!-- NAVBAR UNIVERSAL -->
+  <header id="navbar" class="fixed top-0 inset-x-0 z-50 bg-slate-dark">
+    <div class="max-w-7xl mx-auto px-5 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="index.html" class="footer-logo text-xl tracking-tight">Torres <em>&amp;</em> Asociados</a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="index.html"    class="nav-link">Inicio</a>
+          <a href="areas.html"   class="nav-link">Áreas</a>
+          <a href="equipo.html"  class="nav-link">Equipo</a>
+          <a href="contacto.html" class="nav-link active">Contacto</a>
+        </nav>
+        <div class="hidden md:block">
+          <a href="contacto.html" class="btn-gold text-sm"><i class="fas fa-envelope"></i> Consulta Gratuita</a>
+        </div>
+        <button id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu" class="md:hidden flex flex-col gap-1.5">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" role="navigation">
+      <a href="index.html"    class="nav-link">Inicio</a>
+      <a href="areas.html"   class="nav-link">Áreas de Práctica</a>
+      <a href="equipo.html"  class="nav-link">Nuestro Equipo</a>
+      <a href="contacto.html" class="nav-link active">Contacto</a>
+      <div class="mt-4"><a href="contacto.html" class="btn-gold w-full justify-center text-sm"><i class="fas fa-envelope"></i> Consulta Gratuita</a></div>
+    </div>
+  </header>
+
+
+  <main>
+
+    <!-- PAGE BANNER -->
+    <div class="page-banner" role="banner">
+      <p class="section-eyebrow"><i class="fas fa-envelope mr-2"></i>Hablemos de su caso</p>
+      <h1>Contacto</h1>
+      <p class="breadcrumb">
+        <a href="index.html">Inicio</a>
+        <span>/</span>
+        <span class="text-snow">Contacto</span>
+      </p>
+    </div>
+
+
+    <!-- MAIN CONTACT SECTION -->
+    <section class="py-20 px-5 lg:px-8" aria-label="Formulario de contacto y datos de oficinas">
+      <div class="max-w-7xl mx-auto">
+        <div class="grid lg:grid-cols-5 gap-12 items-start">
+
+          <!-- ── FORMULARIO (3/5) ─────────────────── -->
+          <div class="lg:col-span-3 reveal">
+            <p class="section-eyebrow">Consulta Confidencial</p>
+            <h2 class="section-title mb-2">Envíenos su Mensaje</h2>
+            <div class="gold-divider"></div>
+            <p class="text-slate-400 text-sm leading-relaxed mb-8">
+              Complete el formulario a continuación. Un socio especialista revisará su consulta
+              en un plazo máximo de 24 horas hábiles.
+              <strong class="text-snow"> Todos los campos marcados con * son obligatorios.</strong>
+            </p>
+
+            <form id="contact-form" novalidate class="space-y-5" aria-label="Formulario de contacto corporativo">
+
+              <!-- Fila: Nombre + Empresa -->
+              <div class="grid sm:grid-cols-2 gap-5">
+
+                <div class="form-group">
+                  <label for="nombre" class="form-label">Nombre completo *</label>
+                  <input
+                    type="text" id="nombre" name="nombre"
+                    class="form-input"
+                    placeholder="Ej. Ana García López"
+                    required autocomplete="name"
+                    aria-required="true"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="empresa" class="form-label">Empresa / Organización</label>
+                  <input
+                    type="text" id="empresa" name="empresa"
+                    class="form-input"
+                    placeholder="Ej. Grupo Empresarial XYZ"
+                    autocomplete="organization"
+                  />
+                </div>
+              </div>
+
+              <!-- Email + Teléfono -->
+              <div class="grid sm:grid-cols-2 gap-5">
+
+                <div class="form-group">
+                  <label for="email" class="form-label">Correo electrónico *</label>
+                  <input
+                    type="email" id="email" name="email"
+                    class="form-input"
+                    placeholder="nombre@empresa.com"
+                    required autocomplete="email"
+                    aria-required="true"
+                  />
+                </div>
+
+                <div class="form-group">
+                  <label for="telefono" class="form-label">Teléfono de contacto</label>
+                  <input
+                    type="tel" id="telefono" name="telefono"
+                    class="form-input"
+                    placeholder="+56 9 4034 2402"
+                    autocomplete="tel"
+                  />
+                </div>
+              </div>
+
+              <!-- Asunto / Área -->
+              <div class="form-group">
+                <label for="asunto" class="form-label">Área de interés *</label>
+                <select id="asunto" name="asunto" class="form-select" required aria-required="true">
+                  <option value="" disabled selected>— Seleccione una especialidad —</option>
+                  <option value="corporativo">Derecho Corporativo</option>
+                  <option value="litigios">Litigios y Arbitraje</option>
+                  <option value="inmobiliario">Derecho Inmobiliario</option>
+                  <option value="pi">Propiedad Intelectual</option>
+                  <option value="otro">Otro asunto jurídico</option>
+                </select>
+              </div>
+
+              <!-- Urgencia -->
+              <fieldset class="form-group">
+                <legend class="form-label mb-2">Nivel de urgencia</legend>
+                <div class="flex flex-wrap gap-4">
+                  <label class="flex items-center gap-2 cursor-pointer text-sm text-slate-300">
+                    <input type="radio" name="urgencia" value="alta" class="accent-gold" /> Alta — requiero atención inmediata
+                  </label>
+                  <label class="flex items-center gap-2 cursor-pointer text-sm text-slate-300">
+                    <input type="radio" name="urgencia" value="media" class="accent-gold" checked /> Media — en los próximos días
+                  </label>
+                  <label class="flex items-center gap-2 cursor-pointer text-sm text-slate-300">
+                    <input type="radio" name="urgencia" value="baja" class="accent-gold" /> Baja — consulta informativa
+                  </label>
+                </div>
+              </fieldset>
+
+              <!-- Mensaje -->
+              <div class="form-group">
+                <label for="mensaje" class="form-label">Descripción del asunto *</label>
+                <textarea
+                  id="mensaje" name="mensaje"
+                  class="form-textarea"
+                  placeholder="Describa brevemente su situación jurídica, los hechos relevantes y el resultado que espera obtener. Esta información es completamente confidencial."
+                  required aria-required="true"
+                  rows="6"
+                ></textarea>
+              </div>
+
+              <!-- Aviso legal -->
+              <div class="flex items-start gap-3">
+                <input type="checkbox" id="privacidad" name="privacidad" class="mt-1 accent-gold flex-shrink-0" required />
+                <label for="privacidad" class="text-xs text-slate-500 leading-relaxed">
+                  He leído y acepto el <a href="#" class="text-gold hover:underline">Aviso de Privacidad</a>
+                  de Torres &amp; Asociados. Entiendo que mi información se tratará con estricta
+                  confidencialidad y solo se utilizará para gestionar mi consulta.
+                </label>
+              </div>
+
+              <button type="submit" class="btn-gold w-full justify-center text-base mt-2">
+                <i class="fas fa-paper-plane"></i> Enviar Consulta
+              </button>
+
+            </form>
+          </div>
+
+
+          <!-- ── INFORMACIÓN Y MAPA (2/5) ────────── -->
+          <aside class="lg:col-span-2 space-y-6 reveal" aria-label="Información de contacto">
+
+            <div>
+              <p class="section-eyebrow">Información de Oficinas</p>
+              <h3 class="font-serif text-2xl font-bold mb-4">Encuéntrenos</h3>
+              <div class="gold-divider"></div>
+            </div>
+
+            <!-- Oficina Principal -->
+            <div class="office-item" role="region" aria-label="Oficina principal">
+              <i class="fas fa-building office-icon"></i>
+              <div>
+                <p class="office-label">Oficina Principal — CDMX</p>
+                <p class="office-text">Av. Paseo de la Reforma 2500, Piso 22<br />Col. Juárez, Cuauhtémoc<br />C.P. 06600, Ciudad de México</p>
+              </div>
+            </div>
+
+            <!-- Oficina Monterrey -->
+            <div class="office-item" role="region" aria-label="Oficina Monterrey">
+              <i class="fas fa-building office-icon"></i>
+              <div>
+                <p class="office-label">Sucursal — Monterrey</p>
+                <p class="office-text">Blvd. Antonio L. Rodríguez 3000<br />Piso 15, Col. Santa María<br />Monterrey, N.L. C.P. 64650</p>
+              </div>
+            </div>
+
+            <!-- Teléfono -->
+            <div class="office-item">
+              <i class="fas fa-phone office-icon"></i>
+              <div>
+                <p class="office-label">Teléfonos</p>
+                <p class="office-text">
+                  +56 9 4034 2402 · Oficina Central<br /></p>
+              </div>
+            </div>
+
+            <!-- Correo -->
+            <div class="office-item">
+              <i class="fas fa-envelope office-icon"></i>
+              <div>
+                <p class="office-label">Correo Electrónico</p>
+                <p class="office-text">
+                  toriiicode@gmail.com<br />
+                  socios@torresasociados.mx
+                </p>
+              </div>
+            </div>
+
+            <!-- Horario -->
+            <div class="office-item">
+              <i class="fas fa-clock office-icon"></i>
+              <div>
+                <p class="office-label">Horario de Atención</p>
+                <p class="office-text">
+                  Lunes a Viernes · 09:00 – 18:00 hrs<br />
+                  Sábados · 10:00 – 13:00 hrs (con cita previa)<br />
+                  <span class="text-gold/70 text-xs mt-1 block">* Urgencias disponibles 24/7</span>
+                </p>
+              </div>
+            </div>
+
+            <!-- Mapa Interactivo — Spid Vecinal, Providencia, Santiago de Chile -->
+            <div>
+              <p class="form-label mb-2">Ubicación — Spid Vecinal, Santiago de Chile</p>
+              <iframe
+                title="Mapa de Spid Vecinal, Av. Bilbao 2433, Providencia, Santiago"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3329.5282456032916!2d-70.61830792357616!3d-33.43569169873609!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662cf5db10ca255%3A0x8b65de6c5e1fc1a!2sSpid%20Vecinal%20Bilbao!5e0!3m2!1ses!2scl!4v1725228000000!5m2!1ses!2scl"
+                width="100%"
+                height="300"
+                style="border:0; border-radius:4px; filter: invert(90%) hue-rotate(180deg) saturate(0.6) brightness(0.85);"
+                allowfullscreen
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+                aria-label="Mapa interactivo — Spid Vecinal, Av. Bilbao 2433, Providencia, Santiago de Chile">
+              </iframe>
+              <p class="text-xs text-slate-600 mt-2 flex items-center gap-1">
+                <i class="fas fa-map-pin text-gold/50"></i>
+                Spid Vecinal · Av. Bilbao 2433, Providencia, Santiago, Chile
+              </p>
+            </div>
+
+          </aside>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- PROCESO DE ATENCIÓN -->
+    <section class="bg-slate-mid/30 border-y border-gold/10 py-20 px-5 lg:px-8">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14 reveal">
+          <p class="section-eyebrow">Proceso de Consulta</p>
+          <h2 class="section-title">¿Cómo Trabajamos?</h2>
+          <div class="gold-divider mx-auto"></div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8" data-stagger>
+
+          <div class="text-center reveal">
+            <div class="w-14 h-14 rounded-full border-2 border-gold/40 flex items-center justify-center mx-auto mb-4 text-gold font-serif text-xl font-bold">01</div>
+            <h3 class="font-serif font-bold text-lg mb-2">Recepción</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Recibimos su consulta y la clasificamos según el área de especialidad requerida.</p>
+          </div>
+
+          <div class="text-center reveal">
+            <div class="w-14 h-14 rounded-full border-2 border-gold/40 flex items-center justify-center mx-auto mb-4 text-gold font-serif text-xl font-bold">02</div>
+            <h3 class="font-serif font-bold text-lg mb-2">Evaluación</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Un socio especialista analiza los hechos y determina la estrategia jurídica más adecuada.</p>
+          </div>
+
+          <div class="text-center reveal">
+            <div class="w-14 h-14 rounded-full border-2 border-gold/40 flex items-center justify-center mx-auto mb-4 text-gold font-serif text-xl font-bold">03</div>
+            <h3 class="font-serif font-bold text-lg mb-2">Propuesta</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Le presentamos un plan de acción claro con alcance, tiempos y honorarios transparentes.</p>
+          </div>
+
+          <div class="text-center reveal">
+            <div class="w-14 h-14 rounded-full border-2 border-gold/40 flex items-center justify-center mx-auto mb-4 text-gold font-serif text-xl font-bold">04</div>
+            <h3 class="font-serif font-bold text-lg mb-2">Ejecución</h3>
+            <p class="text-slate-400 text-sm leading-relaxed">Con su aprobación, comenzamos a trabajar con seguimiento continuo y comunicación directa.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER UNIVERSAL -->
+  <footer>
+    <div class="max-w-7xl mx-auto px-5 lg:px-8 py-16">
+      <div class="grid md:grid-cols-4 gap-10">
+        <div class="md:col-span-2">
+          <a href="index.html" class="footer-logo text-lg">Torres <em>&</em> Asociados</a>
+          <p class="text-slate-500 text-sm leading-relaxed mt-4 max-w-sm">Firma jurídica de excelencia con presencia nacional. Comprometidos con la defensa de sus derechos e intereses con la más alta ética profesional.</p>
+          <div class="flex gap-3 mt-6">
+            <a href="https://instagram.com/ToriiCode" target="_blank" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="https://tiktok.com/@ToriiCode" target="_blank" class="social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/56940342402" target="_blank" class="social-btn" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <nav aria-label="Navegación footer">
+          <p class="text-gold text-xs font-bold tracking-widest uppercase mb-4">Páginas</p>
+          <ul class="space-y-2">
+            <li><a href="index.html"    class="footer-link">Inicio</a></li>
+            <li><a href="areas.html"   class="footer-link">Áreas de Práctica</a></li>
+            <li><a href="equipo.html"  class="footer-link">Nuestro Equipo</a></li>
+            <li><a href="contacto.html" class="footer-link">Contacto</a></li>
+          </ul>
+        </nav>
+        <div>
+          <p class="text-gold text-xs font-bold tracking-widest uppercase mb-4">Contacto</p>
+          <ul class="space-y-3 text-sm text-slate-500">
+            <li class="flex gap-2"><i class="fas fa-location-dot text-gold mt-0.5"></i> Av. Reforma 2500, CDMX</li>
+            <li class="flex gap-2"><i class="fas fa-phone text-gold mt-0.5"></i> +56 9 4034 2402</li>
+            <li class="flex gap-2"><i class="fas fa-envelope text-gold mt-0.5"></i> toriiicode@gmail.com</li>
+            <li class="flex gap-2"><i class="fas fa-clock text-gold mt-0.5"></i> Lun–Vie, 09:00–18:00</li>
+          </ul>
+        </div>
+      </div>
+      <hr class="border-gold/10 mt-12 mb-6" />
+      <div class="flex flex-col md:flex-row justify-between items-center gap-3 text-slate-600 text-xs">
+        <p>© 2026 Torres &amp; Asociados. Todos los derechos reservados.</p>
+        <p>Diseñado con <i class="fas fa-heart text-gold/60"></i> para la excelencia jurídica.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
